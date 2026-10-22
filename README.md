@@ -1,8 +1,8 @@
 # Adipokine–lipid metabolic programme (ALMP) in cutaneous melanoma — analysis code
 
-Archival analysis code for the manuscript *"Adipokine–lipid metabolic reprogramming in
-cutaneous melanoma: a decomposable programme with a CAF-derived core and a
-stroma-independent tumour-intrinsic axis"*.
+Archival analysis code for the manuscript *"A decomposable adipokine–lipid programme in
+cutaneous melanoma: a stromal adipokine core and a stroma-independent tumour-intrinsic
+axis"*.
 
 This repository contains **the scripts that produced every number, figure and table** in the
 manuscript. It is a **transparency archive, not a turnkey pipeline**: scripts are kept in the

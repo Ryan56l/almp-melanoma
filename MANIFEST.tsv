@@ -36,5 +36,5 @@ directory	file	description	md5	bytes
 04_tables	table1_cohorts.py	表 1	5497e67662c762f399cbb53ddeda3f82	5475
 04_tables	table2_causal_matrix.py	表 2	c3ab153153f9329150320d2615ab4c21	7598
 05_assemble	wordcount.py	词数（wc -w 口径）	10dca24bff6a9f6ca4d312850e329e31	4729
-05_assemble	assemble_docx.py	完整稿拼装	6757c34a67ca8d3c35cfa1da9ddd3d2b	11489
+05_assemble	assemble_docx.py	完整稿拼装	a0f83933ce681ac82ace1a46c680b163	11466
 05_assemble	scaffold_manuscript.py	稿架与 ASCII 别名	17e7e6b8be14c302ca658c00bca6c0e0	18929

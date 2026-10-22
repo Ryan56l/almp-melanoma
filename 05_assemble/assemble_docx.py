@@ -148,13 +148,13 @@ def H(text, level=1):
 
 
 # ---------------- Title page
-P("Adipokine–lipid metabolic reprogramming in cutaneous melanoma: a decomposable "
-  "programme with a CAF-derived core and a stroma-independent tumour-intrinsic axis",
+P("A decomposable adipokine–lipid programme in cutaneous melanoma: a stromal "
+  "adipokine core and a stroma-independent tumour-intrinsic axis",
   bold=True, size=14, align="c", space_after=12)
 P("[Authors — to be completed]", align="c", space_after=4)
 P("[Affiliations — to be completed]", align="c", space_after=4)
 P("Corresponding author: [name, email]", align="c", space_after=4)
-P("Word count (Introduction + Results + Discussion): 5,371 · Abstract: 292 · "
+P("Word count (Introduction + Results + Discussion): 5,943 · Abstract: 299 · "
   "Figures: 7 · Tables: 2 · Supplementary tables: S1, S3, S4 (S2 in preparation)",
   align="c", size=10, space_after=18)
 
