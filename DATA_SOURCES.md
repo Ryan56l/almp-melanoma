@@ -33,20 +33,26 @@ single-arm, so no treatment-by-score interaction is estimable.
 
 ## Causal layer
 
-| Resource | Accession | Used for |
-|---|---|---|
-| Melanoma outcome (primary) | GCST90475578 (MVP, 10,468 cases) | two-sample MR outcome |
-| Replication outcome | ieu-b-4969 | MR replication |
-| Sensitivity outcomes | finn-b-C3_SKIN, ieu-b-4959 | MR sensitivity |
-| Leptin instrument | GCST90007319 (5 SNPs) | exposure |
-| Adiponectin instrument | GCST90007313 (11 SNPs reported; see SAP) | exposure |
-| Resistin instrument | GCST90007319-series | exposure |
-| BMI instrument | GCST90000501 | negative-control exposure |
-| Lymphocyte / WBC counts | GCST90000507 / GCST90000504 | negative-control exposures |
-| GTEx v8 | four tissues (skin, subcutaneous adipose, visceral adipose, whole blood) | cis-SMR and colocalisation |
+Accessions below are exactly those stated in the manuscript's Data Availability section and were
+verified against source records between 8 and 22 October 2026.
 
-Note: the Landi 2020 melanoma GWAS was **not** obtained; dbGaP access was not initiated. This
-is disclosed in the manuscript and in SAP v1.8.
+| Resource | Accession | Role |
+|---|---|---|
+| Leptin (BMI-adjusted) instrument | `ebi-a-GCST90007319` | exposure, 5 SNPs |
+| Adiponectin instrument | `ieu-a-1` | exposure, 11 SNPs |
+| Resistin instrument | `ebi-a-GCST90012034` | exposure, 13 SNPs |
+| Body mass index | `ieu-b-40` (primary), `ebi-a-GCST90029007` (sensitivity) | negative-control exposure |
+| Lymphocyte count | `ebi-a-GCST90025984` | mediation trait (Barton 2021, UK Biobank) |
+| White blood cell count | `ebi-a-GCST90025985` | mediation trait (Barton 2021, UK Biobank) |
+| Cutaneous melanoma (primary outcome) | `GCST90475578` (Million Veteran Program; 10,468 cases, 436,283 controls) | outcome |
+| Replication outcome | `ieu-b-4969` (3,751 cases, 372,016 controls) | outcome |
+| Sensitivity outcomes | `finn-b-C3_SKIN` (10,384 cases, 208,408 controls); `ieu-b-4959` (23,694 cases, 372,016 controls) | outcome |
+| GTEx v8 | skin, subcutaneous adipose, visceral adipose, whole blood | cis-SMR and colocalisation |
+
+**Sourcing note.** The primary outcome was obtained from the EBI GWAS Catalog FTP archive rather
+than from OpenGWAS. The Landi 2020 melanoma meta-analysis was not obtained and dbGaP access was
+not initiated; this is disclosed in the manuscript and in SAP v1.8. OpenGWAS tokens used during
+retrieval expired on 2026-10-25.
 
 ## Software
 
