@@ -1,0 +1,17 @@
+# Observed environment (author's machine)
+
+Python 3.13.14
+  numpy 2.5.3
+  scipy 1.18.1
+  pandas 3.0.6
+  matplotlib 3.11.2
+
+R 4.6.1
+  GSVA            (Bioconductor)
+  quantiseqr      (Bioconductor, quanTIseq)
+  survival, glmnet, coloc, TwoSampleMR
+  UCell
+
+Note: PLINK and the `estimate` package were NOT installed; ESTIMATE-based purity was
+therefore not used, and purity was handled with deconvolution-derived cell fractions
+(see manuscript Methods and Supplementary Table S2).
