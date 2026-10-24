@@ -46,7 +46,7 @@ tc = pd.read_csv(os.path.join(os.path.expanduser("~"), "WorkBuddy", "2026-10-07-
 tc["symbol"] = tc.entrezGeneId.astype(int).map(e2s)
 T = tc.dropna(subset=["symbol"]).pivot_table(index="sampleId", columns="symbol",
                                              values="value", aggfunc="mean")
-hi = pd.read_csv(os.path.join(D, "P5T1_cell_autonomous_intrinsic_subset.tsv"), sep="\t")
+hi = pd.read_csv(os.path.join(D, "P5T1_cell_autonomous_intrinsic_subset_v2.tsv"), sep="\t")
 ca = [g for g in hi.gene_symbol if g in T.columns and g in P.columns]
 print("lines", len(mel), len(fib), "| tumours", T.shape)
 
@@ -122,7 +122,7 @@ sm = pd.read_csv(os.path.join(D, "P5T1_axis_summary.tsv"), sep="\t")
 seg = {"tissue-compositional (16)": "comp.\n16", "tumour-intrinsic (292)": "intr.\n288",
        "SEG1 adipokine core (22)": "core\n22", "SEG2 lipid pathway (243)": "lipid\n243",
        "SEG3 executor (39)": "exec.\n39"}
-s1 = pd.read_csv(os.path.join(ROOT, "supp", "S1_ALMP_308gene_list_and_axis_v1.csv"))
+s1 = pd.read_csv(os.path.join(ROOT, "supp", "S1_ALMP_308gene_list_and_axis_v2.csv"))
 axs = dict(zip(s1.gene_symbol, s1.axis)); sg = dict(zip(s1.gene_symbol, s1.segment_primary))
 groups = [("comp.", [g for g in s1.gene_symbol if axs.get(g) == "tissue-compositional"]),
           ("intr.", [g for g in s1.gene_symbol if axs.get(g) == "tumour-intrinsic"]),
@@ -150,8 +150,8 @@ block("b", "Axis-wise medians", 106, 10)
 # ================= c/d 散点四联
 panels = [("tumours (472)\nall 288 intrinsic", T, intr, C["blue"]),
           ("melanoma lines (50)\nall 288 intrinsic", P.loc[mel], intr, C["red"]),
-          ("tumours (472)\n166 cell-autonomous", T, ca, C["teal"]),
-          ("melanoma lines (50)\n166 cell-autonomous", P.loc[mel], ca, C["purple"])]
+          ("tumours (472)\n171 cell-autonomous", T, ca, C["teal"]),
+          ("melanoma lines (50)\n171 cell-autonomous", P.loc[mel], ca, C["purple"])]
 xs = [26, 49, 73, 96]
 for k, (lab, sub, genes, col) in enumerate(panels):
     ax = A(xs[k], 108, 20, 24)

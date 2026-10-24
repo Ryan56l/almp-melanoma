@@ -18,7 +18,7 @@ OUT = os.path.join(ROOT, "P5-T3_GSE115978复现v1")
 OD = os.path.join(OUT, "data")
 os.makedirs(OD, exist_ok=True)
 
-s1 = pd.read_csv(os.path.join(ROOT, "supp", "S1_ALMP_308gene_list_and_axis_v1.csv"))
+s1 = pd.read_csv(os.path.join(ROOT, "supp", "S1_ALMP_308gene_list_and_axis_v2.csv"))
 ax = dict(zip(s1.gene_symbol, s1.axis))
 seg = dict(zip(s1.gene_symbol, s1.segment_primary))
 core = [g for g in s1.gene_symbol if seg.get(g) == "SEG1 adipokine core"]

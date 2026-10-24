@@ -7,7 +7,7 @@ from scipy import stats
 
 ROOT = r"C:\Users\刘宸瑞\Desktop\脂肪因子生信\manuscript\output"
 D = os.path.join(ROOT, "P5-T1_细胞系内在轴验证v1", "data")
-S1 = pd.read_csv(os.path.join(ROOT, "supp", "S1_ALMP_308gene_list_and_axis_v1.csv"))
+S1 = pd.read_csv(os.path.join(ROOT, "supp", "S1_ALMP_308gene_list_and_axis_v2.csv"))
 
 # ---------- 1. 载入
 cc = pd.read_csv(os.path.join(D, "ccle_melanoma_308genes_rpkm.tsv"), sep="\t")

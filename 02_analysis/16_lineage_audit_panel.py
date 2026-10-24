@@ -96,7 +96,7 @@ tc = pd.read_csv(os.path.join(os.path.expanduser("~"), "WorkBuddy", "2026-10-07-
 tc["symbol"] = tc.entrezGeneId.astype(int).map(e2s)
 T = tc.dropna(subset=["symbol"]).pivot_table(index="sampleId", columns="symbol",
                                              values="value", aggfunc="mean")
-hi = pd.read_csv(os.path.join(D, "P5T1_cell_autonomous_intrinsic_subset.tsv"), sep="\t")
+hi = pd.read_csv(os.path.join(D, "P5T1_cell_autonomous_intrinsic_subset_v2.tsv"), sep="\t")
 ca = [g for g in hi.gene_symbol if g in T.columns and g in P.columns]
 
 
@@ -112,7 +112,7 @@ def rr(sub, genes):
 q = []
 for tag, sub in [("tumours (472)", T), ("melanoma lines (audited)", P.loc[mel]),
                  ("fibroblast lines (control)", P.loc[fib])]:
-    for gname, genes in [("all intrinsic", intr), ("166 cell-autonomous", ca)]:
+    for gname, genes in [("all intrinsic", intr), ("171 cell-autonomous", ca)]:
         r, p, k = rr(sub, genes)
         q.append(dict(dataset=tag, gene_set=gname, n_genes=k, rho=r, p=p))
 Q = pd.DataFrame(q)

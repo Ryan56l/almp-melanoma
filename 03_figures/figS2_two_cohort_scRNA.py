@@ -51,7 +51,7 @@ def thin(ax):
 axa = A(24, 32, 60, 42)
 xx = np.arange(len(ORD))
 SER = [("core", "core (22)", C["red"], "o"), ("intrinsic", "intrinsic (273)", C["blue"], "s"),
-       ("intrinsic166", "intrinsic, 166", C["teal"], "^")]
+       ("intrinsic171", "intrinsic, 171", C["teal"], "^")]
 axa.axvspan(0.6, 2.4, color=C["light"], alpha=.6, lw=0, zorder=0)
 for k, (col, lab, cc, mk) in enumerate(SER):
     v = [float(sc.loc[sc.cell_type == g, col].median()) for g in ORD]
@@ -126,6 +126,6 @@ txt(111, 135.6, "attribution rests on the lymphoid contrast and the cell-line da
 txt(111, 138.6, "not on a comparison with macrophages", fontsize=4.8, color=C["ink"], style="italic")
 
 for ext in ["pdf", "png"]:
-    fig.savefig(os.path.join(FIG, f"figS6_two_cohort_scRNA.{ext}"), dpi=300)
+    fig.savefig(os.path.join(FIG, f"figS2_two_cohort_scRNA.{ext}"), dpi=300)
 print("saved")
 print(DD.round(5).to_string(index=False))

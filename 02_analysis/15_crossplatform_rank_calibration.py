@@ -22,7 +22,7 @@ os.makedirs(os.path.join(OUT, "data"), exist_ok=True)
 OD = os.path.join(OUT, "data")
 
 # ---------- 0. 基因与轴定义
-s1 = pd.read_csv(os.path.join(ROOT, "supp", "S1_ALMP_308gene_list_and_axis_v1.csv"))
+s1 = pd.read_csv(os.path.join(ROOT, "supp", "S1_ALMP_308gene_list_and_axis_v2.csv"))
 gm = json.load(open(os.path.join(D, "gene_map.json")))
 e2s = {int(k): v for k, v in gm["entrez2symbol"].items()}
 sym2e = {v: k for k, v in e2s.items()}

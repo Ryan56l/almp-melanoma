@@ -74,7 +74,7 @@ chk("S5 SERPINE1 成纤维中位", g.loc["SERPINE1", "median_RPKM_7_fibroblast"]
 chk("S5 IL6 倍数(原始)", g.loc["IL6", "fold_fibroblast_over_melanoma"], float(P.loc[fib, "IL6"].median() / P.loc[mel, "IL6"].median()), 1e-6)
 
 # ---- 2. S2 e/f/g
-s2 = pd.read_csv(os.path.join(ROOT, "supp", "S2_sensitivity_analyses_v1.csv"))
+s2 = pd.read_csv(os.path.join(ROOT, "supp", "S2_sensitivity_analyses_v2.csv"))
 e = s2[s2.analysis_block.str.startswith("S2e")].set_index("level")
 def eval_(lvl):
     v = e.loc[lvl, "value"]
@@ -89,9 +89,9 @@ f = s2[s2.analysis_block.str.startswith("S2f")]
 m50 = f[(f.level.str.startswith("50")) & (f.comparison.str.contains("all 288"))].value.iloc[0]
 chk("S2f 50 株 ρ(全288)", float(m50), Q[(Q.dataset == "melanoma lines (audited)") &
     (Q.gene_set == "all intrinsic")].rho.iloc[0], 5e-3)
-m166 = f[(f.level.str.startswith("50")) & (f.comparison.str.contains("166"))].value.iloc[0]
-chk("S2f 50 株 ρ(166)", float(m166), Q[(Q.dataset == "melanoma lines (audited)") &
-    (Q.gene_set == "166 cell-autonomous")].rho.iloc[0], 5e-3)
+m166 = f[(f.level.str.startswith("50")) & (f.comparison.str.contains("171"))].value.iloc[0]
+chk("S2f 50 株 ρ(171)", float(m166), Q[(Q.dataset == "melanoma lines (audited)") &
+    (Q.gene_set == "171 cell-autonomous")].rho.iloc[0], 5e-3)
 gg = s2[s2.analysis_block.str.startswith("S2g")].set_index("comparison")
 chk("S2g SERPINE1 倍数", float(gg.loc["SERPINE1 median RPKM, fibroblast / melanoma", "note"].rstrip("x")),
     float(P.loc[fib, "SERPINE1"].median() / P.loc[mel, "SERPINE1"].median()), 0.5)

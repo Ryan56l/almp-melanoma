@@ -36,7 +36,7 @@ print("histology 非空:", sum(1 for v in h.values() if v))
 
 # ---- 2. 308 基因 → entrez
 s1 = pd.read_csv(r"C:\Users\刘宸瑞\Desktop\脂肪因子生信\manuscript\output\supp"
-                 r"\S1_ALMP_308gene_list_and_axis_v1.csv")
+                 r"\S1_ALMP_308gene_list_and_axis_v2.csv")
 sym = [s.strip() for s in s1["gene_symbol"].tolist()]
 print("genes:", len(sym))
 m = {}

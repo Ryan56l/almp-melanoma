@@ -154,7 +154,7 @@ P("A decomposable adipokine–lipid programme in cutaneous melanoma: a stromal "
 P("[Authors — to be completed]", align="c", space_after=4)
 P("[Affiliations — to be completed]", align="c", space_after=4)
 P("Corresponding author: [name, email]", align="c", space_after=4)
-P("Word count (Introduction + Results + Discussion): 6,109 · Abstract: 298 · "
+P("Word count (Introduction + Results + Discussion): 6,151 · Abstract: 298 · "
   "Figures: 7 + Figures S1-S2 · Tables: 2 · Supplementary tables: S1-S5",
   align="c", size=10, space_after=18)
 
@@ -296,15 +296,17 @@ add_csv_table("表2_因果层32组合判定矩阵_v1.csv",
 doc.add_page_break()
 H("Supplementary material")
 for s in [
-    "Table S1. The 308-gene adipokine–lipid metabolic programme, axis assignment and "
-    "adipose-specificity criteria (supp/S1_ALMP_308gene_list_and_axis_v1.csv).",
+    "Table S1. The 308-gene adipokine–lipid metabolic programme, axis assignment, "
+    "adipose-specificity criteria and the cell-autonomous detection tier of the intrinsic axis "
+    "(supp/S1_ALMP_308gene_list_and_axis_v2.csv).",
     "Table S2. Sensitivity analyses: deconvolution framework, scoring algorithm, "
     "preprocessing, instrument pruning and detection threshold "
-    "(supp/S2_sensitivity_analyses_v1.csv).",
+    "(supp/S2_sensitivity_analyses_v2.csv).",
     "Table S3. All immune checkpoint blockade response and TMB-stratified tests, with "
     "pooled estimates (supp/S3_ICB_response_and_TMB_tests_v1.csv).",
     "Table S4. Reporting-standard crosswalk (STROBE, STROBE-MR, TRIPOD+AI, REMARK, SAGER, "
-    "RECORD) and the SAP version chain.",
+    "RECORD) and the SAP version chain "
+    "(supp/S4_reporting_standards_crosswalk_v1.csv).",
     "Table S5. Per-gene detection of the 308-gene programme in 50 marker-audited melanoma cell "
     "lines, the 7 fibroblast lines that had been deposited as melanoma, and 472 TCGA-SKCM "
     "tumours (supp/S5_ALMP_gene_detection_celllines_v2.csv).",
