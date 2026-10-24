@@ -13,7 +13,7 @@ from docx.enum.table import WD_TABLE_ALIGNMENT
 from docx.oxml.ns import qn
 
 O = r"C:/Users/刘宸瑞/Desktop/脂肪因子生信/manuscript/output"
-OUT_DOCX = os.path.join(O, "ALMP_manuscript_v1_20261023.docx")
+OUT_DOCX = os.path.join(O, "ALMP_manuscript_v3_20261023.docx")
 
 
 def read(fn):
@@ -154,8 +154,8 @@ P("A decomposable adipokine–lipid programme in cutaneous melanoma: a stromal "
 P("[Authors — to be completed]", align="c", space_after=4)
 P("[Affiliations — to be completed]", align="c", space_after=4)
 P("Corresponding author: [name, email]", align="c", space_after=4)
-P("Word count (Introduction + Results + Discussion): 5,943 · Abstract: 299 · "
-  "Figures: 7 · Tables: 2 · Supplementary tables: S1, S3, S4 (S2 in preparation)",
+P("Word count (Introduction + Results + Discussion): 6,109 · Abstract: 298 · "
+  "Figures: 7 + Figures S1-S2 · Tables: 2 · Supplementary tables: S1-S5",
   align="c", size=10, space_after=18)
 
 # ---------------- Abstract
@@ -190,7 +190,7 @@ for para in intro_block:
 H("Methods")
 emit(sections(MS, "## 9."), r"^2\.\d", 2)
 H("Results")
-emit(sections(RS, "## 3.6"), r"^3\.[1-5] ", 2)
+emit(sections(RS, "## 附：口径自查"), r"^3\.[1-6] ", 2)
 H("Discussion")
 emit(sections(DS, "## 4.8"), r"^4\.[1-7] ", 2)
 
@@ -203,9 +203,11 @@ for sub, body in [
     ("Consent for publication", "Not applicable."),
     ("Availability of data and materials",
      "All datasets are public and listed with their accessions in the Data Availability "
-     "statement below. Derived score matrices, covariate-adjusted correlation tables and "
-     "figure source data are provided as Supplementary Tables S1–S4. Analysis code is "
-     "available from the corresponding author on reasonable request."),
+     "statement below. Derived score matrices, covariate-adjusted correlation tables, per-gene "
+     "detection tables and figure source data are provided as Supplementary Tables S1–S5. All "
+     "analysis code, from data retrieval to figure generation, is archived at "
+     "https://github.com/[USERNAME]/almp-melanoma and deposited at Zenodo ([DOI to be inserted "
+     "on acceptance]), with a file-by-file manifest and a data-source table."),
     ("Competing interests", "[To be completed by the authors.]"),
     ("Funding", "[To be completed by the authors.]"),
     ("Authors' contributions", "[To be completed: CRediT roles.]"),
@@ -239,6 +241,8 @@ FIGMAP = {
     5: ["fig5_singlecell.png"],
     6: ["fig6a_causal_forest.png", "fig6bcd_causal_audit.png"],
     7: ["fig7_exploratory.png"],
+    "S1": ["figS1_cellline_audited.png"],
+    "S2": ["figS2_two_cohort_scRNA.png"],
 }
 
 doc.add_page_break()
@@ -251,8 +255,10 @@ for block in LG.split("\n## ")[1:]:
                  and not re.fullmatch(r"[-–—\s|]+", x)]:
         P(para.strip().replace("**", ""), size=10, align="j", space_after=4)
     m = re.match(r"Figure\s+(\d+)\.", head_line.strip())
-    if m:
-        for fn in FIGMAP.get(int(m.group(1)), []):
+    ms = re.match(r"Figure\s+(S\d+)\.", head_line.strip())
+    key = int(m.group(1)) if m else (ms.group(1) if ms else None)
+    if key is not None:
+        for fn in FIGMAP.get(key, []):
             fp = os.path.join(FIGF, fn)
             if os.path.exists(fp):
                 doc.add_picture(fp, width=Cm(15.5))
@@ -292,14 +298,21 @@ H("Supplementary material")
 for s in [
     "Table S1. The 308-gene adipokine–lipid metabolic programme, axis assignment and "
     "adipose-specificity criteria (supp/S1_ALMP_308gene_list_and_axis_v1.csv).",
-    "Table S2. Sensitivity analyses (deconvolution framework, scoring algorithm, "
-    "preprocessing, instrument pruning). [To be compiled.]",
+    "Table S2. Sensitivity analyses: deconvolution framework, scoring algorithm, "
+    "preprocessing, instrument pruning and detection threshold "
+    "(supp/S2_sensitivity_analyses_v1.csv).",
     "Table S3. All immune checkpoint blockade response and TMB-stratified tests, with "
     "pooled estimates (supp/S3_ICB_response_and_TMB_tests_v1.csv).",
     "Table S4. Reporting-standard crosswalk (STROBE, STROBE-MR, TRIPOD+AI, REMARK, SAGER, "
     "RECORD) and the SAP version chain.",
+    "Table S5. Per-gene detection of the 308-gene programme in 50 marker-audited melanoma cell "
+    "lines, the 7 fibroblast lines that had been deposited as melanoma, and 472 TCGA-SKCM "
+    "tumours (supp/S5_ALMP_gene_detection_celllines_v2.csv).",
 ]:
     P(s, align="j", size=10, space_after=4)
+P("Supplementary figures S1 and S2 are given with the main figure legends above "
+  "(figures/figS1_cellline_audited.pdf; figures/figS2_two_cohort_scRNA.pdf).",
+  align="j", size=10, space_after=4)
 
 doc.save(OUT_DOCX)
 print("saved:", OUT_DOCX)

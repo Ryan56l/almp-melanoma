@@ -99,8 +99,8 @@ res_n = report("RESULTS", R, "3.1") + 0  # placeholder overridden below
 print("=" * 70)
 print("RESULTS")
 res_n = 0
-for h, blocks in sections(R, ("## 3.6",)):
-    if not re.match(r"^3\.[1-5] ", h):
+for h, blocks in sections(R, ("## 附",)):
+    if not re.match(r"^3\.[1-6] ", h):
         continue
     n = sum(count(b) for b in blocks)
     print(f"  {h[:70]:<72} {n:>5}   [{' / '.join(str(count(b)) for b in blocks)}]")

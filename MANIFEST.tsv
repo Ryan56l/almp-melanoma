@@ -32,9 +32,26 @@ directory	file	description	md5	bytes
 03_figures	fig3_decomposition.py	图 3（2026-10-23 重建）	d17ca9d74e35c3bc924cdd0db3496bab	16034
 03_figures	fig4_group.py	图 4 五面板组版	f9b32341da76c0a604f3e3227da36ac0	14870
 03_figures	fig5_fig6_fig7_singlecell_causal_exploratory.py	图 5、图 6、图 7	78b746623d3da21be690f4582f7a43dd	18248
-03_figures	fig5_panel_cellline.py	图 5 细胞系面板（候选）	329888641719e7ce17c2424cce691a0b	6472
+99_superseded	fig5_cellline_panel_withdrawn.py	已撤：细胞系候选面板（未入稿）	329888641719e7ce17c2424cce691a0b	6472
 04_tables	table1_cohorts.py	表 1	5497e67662c762f399cbb53ddeda3f82	5475
 04_tables	table2_causal_matrix.py	表 2	c3ab153153f9329150320d2615ab4c21	7598
-05_assemble	wordcount.py	词数（wc -w 口径）	10dca24bff6a9f6ca4d312850e329e31	4729
-05_assemble	assemble_docx.py	完整稿拼装	a0f83933ce681ac82ace1a46c680b163	11466
+05_assemble	wordcount.py	词数（wc -w 口径）	f214a7cac8290e1376934620a9568766	4729
+05_assemble	assemble_docx.py	完整稿拼装	109c0501b1b5f45b66e11b5b17516a0d	12395
 05_assemble	scaffold_manuscript.py	稿架与 ASCII 别名	17e7e6b8be14c302ca658c00bca6c0e0	18929
+02_analysis	12b_full_transcriptome_validation.py	全转录组宇宙再验证（21 个基因集）	aa09d77a27a4d87b752fadf8fa385275	4394
+02_analysis	15_crossplatform_rank_calibration.py	跨平台秩校准（Figure S1 图注三条口径）	9bcdb400ae193fd1d3f2b5b730ad7958	6201
+02_analysis	16_lineage_audit_panel.py	细胞系谱系审计 + 核心—内在 2×2	5130be4145deeaf27980fad6edec571a	6120
+02_analysis	16b_subset_tier_audit.py	细胞自主子集分档（50／57 分母对照）	c66666afd7f3ecb741eec76ec3235b08	3332
+02_analysis	17_gse115978_localisation.py	GSE115978 单细胞定位（全转录组 UCell 秩）	59fc0ae0a5f57dabc48ebc4a8dba1c3f	6368
+02_analysis	13e_ladder_n472.py	n=472 复算：单协变量梯度	30b7a700919f5b75bdb1b8d45084fe5b	7931
+02_analysis	13f_ladder_n470.py	n=470 复现（与 13e 逐格对账）	d497377c879f8d22418d541da6fae805	7915
+02_analysis	13g_purity_n472.py	n=472 复算：P0 主分析	d9378648dfde9739cf9861e6e7fe904d	8374
+02_analysis	13h_malignant_n472.py	n=472 复算：恶性含量校正	8f779aa0d12a348054d5c98f2449805a	5121
+02_analysis	13i_fibro_n472.py	n=472 复算：成纤维含量校正	7632f7bfe13a69e6751b2b05c732bc23	4754
+03_figures	figS1_cellline_audited.py	Figure S1（六面板）	d4f2ba5f2f3fb514b94bfaf99c788f0c	11407
+03_figures	figS2_two_cohort_scRNA.py	Figure S2（四面板）	5d606aa7746399cc609638fb6382d4e8	6178
+04_tables	tableS2_sensitivity.py	Table S2（S2a–S2g 分块）	1db78a7d50948418b1df35e50a70425b	5314
+04_tables	tableS5_gene_detection.py	Table S5（308 基因逐基因检出）	7b447f016231036adca0a294795744f0	3972
+05_assemble	verify_sources.py	数字—源表核验	9fc9ee72a31549738150a1cbee4fc379	6110
+05_assemble	docx_wordcheck.py	docx↔md 词数对账	165d6088bfb6aa890dfc37bd55da9579	1958
+99_superseded	gse115978_subset_universe.py	已作废：子集宇宙实现（见 README）	a7c769916c0f0c5edb3b949029723220	6026
