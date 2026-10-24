@@ -1,5 +1,8 @@
 # Adipokine–lipid metabolic programme (ALMP) in cutaneous melanoma — analysis code
 
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23621571.svg)](https://doi.org/10.5281/zenodo.23621571)
+
 Archival analysis code for the manuscript *"A decomposable adipokine–lipid programme in
 cutaneous melanoma: a stromal adipokine core and a stroma-independent tumour-intrinsic
 axis"*.
