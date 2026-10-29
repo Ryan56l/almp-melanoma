@@ -57,3 +57,4 @@ directory	file	description	md5	bytes
 05_assemble	verify_sources.py	数字—源表核验	f29db8f555988ca9afa7e0b8b7ed6d56	6000
 05_assemble	docx_wordcheck.py	docx↔md 词数对账	31fafa937d27ca111759695a39619df8	2210
 99_superseded	gse115978_subset_universe.py	已作废：子集宇宙实现（见 README）	6866f766bd5e82e5bdd6a97fb46591ab	6026
+02_analysis	04b_pool_response_full_transcriptome.py	Full-transcriptome re-pooling of the four ICB response cohorts (DerSimonian–Laird random effects); source of the S3c_pooled block of Table S3 and of Figure 3b	89b7d54645e8496295c924b5294cd977	5921
