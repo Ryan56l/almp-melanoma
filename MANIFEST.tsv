@@ -33,7 +33,7 @@ directory	file	description	md5	bytes
 03_figures	fig4_group.py	图 4 五面板组版	f9b32341da76c0a604f3e3227da36ac0	14870
 03_figures	fig5_fig6_fig7_singlecell_causal_exploratory.py	图 5、图 6、图 7	78b746623d3da21be690f4582f7a43dd	18248
 99_superseded	fig5_cellline_panel_withdrawn.py	已撤：细胞系候选面板（未入稿）	329888641719e7ce17c2424cce691a0b	6472
-04_tables	table1_cohorts.py	表 1	5497e67662c762f399cbb53ddeda3f82	5475
+04_tables	table1_cohorts.py	表 1	0bbf1adcc1809ab0fc06ed4cba1fe289	5888
 04_tables	table2_causal_matrix.py	表 2	c3ab153153f9329150320d2615ab4c21	7598
 05_assemble	wordcount.py	词数（wc -w 口径）	f214a7cac8290e1376934620a9568766	4729
 05_assemble	assemble_docx.py	完整稿拼装	a4dde0b1cb6ff14e4b97b55b8e4c2abe	12195

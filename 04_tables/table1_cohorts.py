@@ -28,12 +28,16 @@ PANEL_A = [
 
 GWAS = [
     # id, trait, role, n, cases/controls, population, k, F range, PMID
+    # k / F range are instrument-strength fields and are filled only for exposure,
+    # negative-control and mediator rows. Outcome rows carry no instruments, so both
+    # fields are em-dashed rather than reporting the outcome GWAS's own significant-locus
+    # count, which is a different quantity (see manuscript Table 1 footnote).
     ("GCST90475578", "Cutaneous melanoma (PheCode)", "Primary outcome",
      "446,751", "10,468 / 436,283", "European (MVP)", "—", "—", "39024449"),
     ("ebi-a-GCST90007319", "Circulating leptin, BMI-adjusted", "Exposure (primary)",
      "56,708", "—", "Mixed", "5", "38.6–100.7", "32917775"),
     ("ieu-a-1", "Adiponectin", "Exposure (primary)",
-     "39,883", "—", "Mixed", "11", "33.0–368.2", "22479202"),
+     "39,883", "—", "Mixed", "10", "33.0–368.2", "22479202"),
     ("ebi-a-GCST90012034", "Resistin", "Exposure (primary)",
      "21,758", "—", "European", "13", "30.1–192.1", "33067605"),
     ("ieu-b-40", "Body mass index (Yengo)", "Exposure (negative-control branch)",
@@ -43,11 +47,11 @@ GWAS = [
     ("ebi-a-GCST90025985", "White blood cell count (Barton, MVP-free)", "Mediator (primary)",
      "444,734", "—", "European", "—", "—", "34226706"),
     ("ieu-b-4969", "Cutaneous melanoma (UK Biobank)", "Outcome (replication)",
-     "375,767", "—", "European", "11", "32.3–229.0", "—"),
+     "375,767", "—", "European", "—", "—", "—"),
     ("finn-b-C3_SKIN", "Malignant skin neoplasm (FinnGen)", "Outcome (sensitivity)",
-     "—", "—", "Finnish", "31", "29.9–199.7", "36653562"),
+     "—", "—", "Finnish", "—", "—", "36653562"),
     ("ieu-b-4959", "Non-melanoma skin cancer", "Outcome (sensitivity)",
-     "395,710", "—", "European", "67", "29.9–831.1", "—"),
+     "395,710", "—", "European", "—", "—", "—"),
 ]
 
 md = io.StringIO()
