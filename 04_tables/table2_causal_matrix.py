@@ -127,7 +127,7 @@ io.open(OUT_MD, "w", encoding="utf-8").write("\n".join(L))
 # ---------- CSV ----------
 with io.open(OUT_CSV, "w", encoding="utf-8-sig", newline="") as f:
     w = csv.writer(f)
-    w.writerow(["序号", "组织", "基因", "eGene q", "显著位点数", "已配对位点", "等位基因同向",
+    w.writerow(["序号", "组织", "基因", "eGene q", "显著位点数", "已配对位点", "回文位点（已剔除）",
                 "SMR b", "SMR OR", "SMR p", "SMR q(BH)", "HEIDI p", "PP.H4",
                 "闸1(SMR q<0.05)", "闸2(HEIDI p>0.05)", "判定"])
     i = 0

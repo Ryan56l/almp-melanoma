@@ -17,7 +17,7 @@ PANEL_A = [
     ("Riaz 2017", "ICB cohort", "107 (49 with pre-treatment response)", "Pre-/on-treatment biopsy",
      "RNA-seq", "Response; coupling", "cBioPortal"),
     ("UCLA 2016 (Hugo)", "ICB cohort", "27", "Pre-treatment biopsy", "RNA-seq",
-     "Coupling only", "cBioPortal"),
+     "Response; coupling", "cBioPortal"),
     ("Van Allen 2015", "ICB cohort, post hoc", "40", "Pre-treatment biopsy", "RNA-seq",
      "Coupling only; no response field", "cBioPortal"),
     ("GSE65904", "External prognostic", "214 (150 with survival annotation)", "Primary tumours",
