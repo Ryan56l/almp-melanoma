@@ -17,12 +17,16 @@ All data are public. Nothing in this repository redistributes primary data.
 | Cohort | Source | Note |
 |---|---|---|
 | Gide 2019 | cBioPortal / GEO | pre-treatment samples, CR/PR vs SD/PD |
-| Riaz 2017 | cBioPortal / GEO | pre-treatment samples |
+| Riaz 2017 | GEO (GSE91061) | pre-treatment samples |
 | Liu 2019 | cBioPortal / GEO | pre-treatment samples |
-| Hugo 2016 (UCLA) | cBioPortal / GEO | pre-treatment samples |
+| Hugo 2016 (UCLA) | GEO (GSE78220) | pre-treatment samples |
 
 Response was harmonised as CR/PR versus SD/PD on pre-treatment samples. All four are
 single-arm, so no treatment-by-score interaction is estimable.
+
+Expression matrices were taken from the source giving the fuller gene coverage for that cohort
+and merged on sample identifiers; the manuscript therefore cites the repositories collectively
+rather than a single interface.
 
 ## Malignant-cell-only layer
 
